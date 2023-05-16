@@ -11,6 +11,7 @@ import store from './store';
 import { Provider } from 'react-redux';
 import { Toaster } from 'react-hot-toast';
 import PrivateRoute from './components/PrivateRoute';
+import UpdateUser from './components/UpdateUser';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='' element={<PrivateRoute />}>
             <Route path='/securePage' element={<SecurePage />} />
+            <Route path='/updateUser' element={<UpdateUser />} />
           </Route>
         </Routes>
       </Router>
